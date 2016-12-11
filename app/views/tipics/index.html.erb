@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Tipics</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tipics.each do |tipic| %>
+      <tr>
+        <td><%= tipic.title %></td>
+        <td><%= tipic.description %></td>
+        <td><%= link_to 'Show', tipic %></td>
+        <td><%= link_to 'Edit', edit_tipic_path(tipic) %></td>
+        <td><%= link_to 'Destroy', tipic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tipic', new_tipic_path %>

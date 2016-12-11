@@ -1,0 +1,2 @@
+class Tipic < ApplicationRecord
+end
